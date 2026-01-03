@@ -9,11 +9,14 @@ Aceasta parte este complet independenta de interfata, persistenta datelor sau in
 
 Structura Domain-ului:
 1)ValueObjects:
+
   ValueObject-urile sunt imutabile si contin validari.
     -Money:reprezinta o suma de bani(doar valori pozitive);
     -Email:valideaza formatul unui email;
     -CampaignId,DonationId,UserId-identificatori unici bazati pe Guid
     -Category:enum pentru tipurile de campanii(Education, Health, Environment, Social;
+
+    
 2)Entities:
 
 
