@@ -8,6 +8,7 @@ Am fost responsabila de modelarea domeniului aplicatiei, incluzand:
 Aceasta parte este complet independenta de interfata, persistenta datelor sau infrastructura. Reprezinta nucleul aplicatiei si va fi utilizata de celelalte module pentru persistenta datelor,interfata utilizator,logare si configurare. 
 
 Structura Domain-ului:
+
 1)ValueObjects:
 
   ValueObject-urile sunt imutabile si contin validari.
