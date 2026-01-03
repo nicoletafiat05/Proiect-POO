@@ -1,6 +1,6 @@
 namespace Proiect_POO.ValueObjects;
 
-public class CampaignId
-{
-    
+public readonly struct CampaignId(Guid Value)
+{ 
+    public static CampaignId New()=>new CampaignId(Guid.NewGuid());
 }

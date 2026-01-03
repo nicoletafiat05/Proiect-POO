@@ -1,6 +1,5 @@
 namespace Proiect_POO.ValueObjects;
-
-public class DonationId
-{
-    
-}
+    public readonly struct DonationId(Guid  Value)
+    {
+        public static DonationId New()=>new DonationId(Guid.NewGuid());
+    }
