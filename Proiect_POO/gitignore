@@ -1,1 +1,4 @@
-gitignore .idea/ bin/ obj/ *.user
+ .idea
+bin 
+obj
+*.user
