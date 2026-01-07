@@ -1,2 +1,3 @@
 Adaug ceva in fisier
 Am adăugat altceva in fișier.
+Verific dacă am drepturi de scriere.
