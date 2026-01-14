@@ -21,12 +21,15 @@ Entitatea Campaign actioneaza ca un Aggregate Root. Aceasta gestioneaza intern c
 Contine logica de business care inchide automat campania atunci cand obiectivul financiar (TargetAmount) a fost atins.
 
 4)Exceptions:
-    DomainException:este o exceptie specifica domeniului, utilizata pentru validarea regulilor de business;
+
+DomainException:este o exceptie specifica domeniului, utilizata pentru validarea regulilor de business;
+
 5) Services
 
   Serviciile reprezintă logica de business aplicată pe entități și agregate. Acestea utilizează entitățile și Value Object-urile definite anterior și permit manipularea și interogarea datelor, respectând regulile domeniului. Fiecare serviciu este responsabil pentru un set clar de funcționalități și se ocupă exclusiv de procesarea logică, fără a avea legături cu persistenta datelor, interfața utilizator sau infrastructura externă.
 
   *AuthenticationService*
+  
 AuthenticationService gestionează autentificarea și sesiunea utilizatorilor.
 Metoda Authenticate verifică existența unui utilizator și îl setează ca utilizator curent, aplicând validările necesare (email obligatoriu, user existent).
 Logout resetează utilizatorul curent, iar IsAdminLoggedIn permite verificarea rapidă a rolului utilizatorului.
@@ -34,6 +37,7 @@ Serviciul utilizează ILogger pentru logarea acțiunilor critice, asigurând mon
 Evoluția aplicației depinde de autentificare, deoarece toate celelalte funcționalități se bazează pe identificarea corectă a utilizatorilor și pe controlul rolurilor acestora.
 
   *CampaignService*
+  
 CampaignService gestionează campaniile de fundraising și comunicarea lor.
 Permite crearea de campanii noi prin CreateCampaign, cu validări privind suma minimă și categoria campaniei.
 Oferă posibilitatea filtrării campaniilor după categorie (GetCampaignsByCategory) sau stare (FindCampaignsByState).
@@ -42,6 +46,7 @@ Serviciul asigură integritatea datelor prin logarea tuturor acțiunilor și res
 În evoluția aplicației, acest serviciu permite monitorizarea activităților campaniilor și furnizarea de informații transparente pentru donatori și admini.
 
   *DonationService*
+  
 DonationService se ocupă cu procesarea și urmărirea donațiilor realizate de utilizatori.
 ProcessDonation permite gestionarea donațiilor unice sau recurente, aplicând validări privind donatorul, campania și suma.
 Serviciul trimite confirmări de donație (SendThankYou) și păstrează loguri detaliate despre fiecare tranzacție.
@@ -49,6 +54,7 @@ Metodele GetAllDonations și GetDonationHistorybyDonor oferă vizibilitate asupr
 Prin acest serviciu, aplicația asigură trasabilitatea donațiilor și transparența fluxului financiar.
 
   *ReportService*
+  
 ReportService generează rapoarte de impact și documente oficiale pentru campanii și donatori.
 GetSumByCategory calculează totalul sumelor donate pentru o categorie de campanii.
 ImpactReport creează mesaje descriptive despre efectele donațiilor, adaptate la tipul campaniei (Educație, Sănătate, Mediu, Social).
