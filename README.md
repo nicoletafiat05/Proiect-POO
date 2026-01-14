@@ -24,7 +24,7 @@ Contine logica de business care inchide automat campania atunci cand obiectivul 
 
 DomainException:este o exceptie specifica domeniului, utilizata pentru validarea regulilor de business;
 
-5) Services
+5)Services:
 
   Serviciile reprezintă logica de business aplicată pe entități și agregate. Acestea utilizează entitățile și Value Object-urile definite anterior și permit manipularea și interogarea datelor, respectând regulile domeniului. Fiecare serviciu este responsabil pentru un set clar de funcționalități și se ocupă exclusiv de procesarea logică, fără a avea legături cu persistenta datelor, interfața utilizator sau infrastructura externă.
 
@@ -62,6 +62,7 @@ GetDocumentConfiguration produce confirmări oficiale pentru donatori, incluzân
 Serviciul contribuie la transparență și credibilitate, oferind informații concrete despre modul în care donațiile au fost utilizate.
 
   *UserService*
+  
 UserService permite monitorizarea activităților utilizatorilor și a donatorilor.
 TrackCampaign returnează toate campaniile în care un utilizator a contribuit, facilitând vizualizarea implicării individuale.
 TrackDonation permite adminilor să obțină lista tuturor donatorilor, păstrând controlul asupra accesului la date.
